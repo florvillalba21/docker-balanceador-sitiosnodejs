@@ -1,6 +1,8 @@
 const http = require('http');
 const mysql = require('mysql2');
 
+const NODE_MSG = process.env.NODE_MSG; 
+
 const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html'});
     
@@ -41,7 +43,7 @@ const server = http.createServer((req, res) => {
                 </head>
                 <body>
                 <h2>Consulta de Alumnos</h2>
-                <h2>SOY EL CONTENEDOR 1</h2>
+                <h2>Soy la: ${NODE_MSG}</h2>
                 <table>
                     <tr>
                         <th>ID</th>
